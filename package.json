@@ -1,0 +1,23 @@
+{
+  "name": "yritysdemo",
+  "version": "1.0.0",
+  "description": "Yritysdemo kouluprojekti",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Merzutchi/YritysDemo.git"
+  },
+  "author": "Merzutchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Merzutchi/YritysDemo/issues"
+  },
+  "homepage": "https://github.com/Merzutchi/YritysDemo#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
