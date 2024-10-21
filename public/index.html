@@ -3,16 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- CSS-tiedosto -->
+    <link rel="stylesheet" href="style.css"> <!-- CSS-tiedosto -->
     <title>Yritysesittely</title>
     <script src="script.js" defer></script> <!-- JavaScript-tiedosto -->
 </head>
 <body>
-    <div id="main_alue">
-        <h1>Tervetuloa YritysDemo-sivustolle</h1>
-        <button onclick="loadPage('yritys')">Yritysesittely</button>
-        <button onclick="loadPage('yhteystiedot')">Yhteystiedot</button>
-        <button onclick="loadPage('henkilokunta')">Henkilökunta</button>
-    </div>
+
+    <header class="navbar">
+        <div class="logo-wrap">
+          <a href="#">
+            <div class="navbar-logo">
+              <h2>Logo</h2>
+            </div>
+          </a>
+        </div>
+        <!-- Menu Button -->
+        <div class="btn-wrap">
+          <span class="menu-btn">Menu</span>
+          <span class="close-btn" style="display: none;">Close</span>
+        </div>
+        <!-- Menu Container -->
+        <div class="menu-container" style="display: none;">
+          <div class="menu-content">
+            <div class="mc-container">
+              <ul class="menu-list">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="menu-footer"></div>
+          </div>
+        </div>
+    </header> 
+
+    <main class="page-container">
+        <div class="page-space">
+          <section class="herosection-section" id="hero" style="clip-path: polygon(-5% 0, 105% 0%, 105% 120%, -5% 120%); opacity: 1; visibility: inherit;">
+            <div class="surface-container surface-overflow">
+              <div class="content-container content-padding">
+                <div class="herosection-container">
+                  <div class="herosection-left" data-hero="title" style="opacity: 1;">
+                    <h1 class="herotitle-title">Give your nails some love.</h1>
+                    <div class="herotitle-container">
+                      <span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Give</span>
+                      <span class="herotitle-flipsurface" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+                        <div class="herotitle-fliptrack" style="translate: none; rotate: none; scale: none; transform: translate(0%, 0%);">
+                          <div class="herotitle-flipword">LOVE</div>
+                          <div class="herotitle-flipword">CARE</div>
+                          <div class="herotitle-flipword">HELP</div>
+                          <div class="herotitle-flipword">COLOR</div>                           
+                        </div>
+                      </span>
+                      <span style="translate: none; rotate: none; scale: none; opacity: 1; transform: (0px, 0px);">To Your</span>                    
+                      <span style="translate: none; rotate: none; scale: none; opacity: 1; transform: (0px, 0px);">Nails</span>
+                    </div>
+                  </div>
+                  <div class="herosection-imagewrapper">
+                    <img alt="" data-hero="image" fetchpriority="high" decoding="async" data-img="fill" class="herosection-image" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent; translate: none; rotate: none; scale: none; opacity: 1; transform-origin: 50% 50%; transform: translate(0px, 0px);" sizes="100vw" srcset="/public/images/polishdrop.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> 
+  
+        <div class="page-space">
+          <section>
+            <div class="page-space">
+              <section id="about" class="about-section">
+                  <h2>About Us</h2>
+                  <div class="about-content">
+                      <div class="about-text">
+                          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti saepe laudantium possimus asperiores iure nam, at quisquam quo aut neque vero corporis dolorum nostrum consequatur libero atque voluptatem reprehenderit expedita.</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nemo dolor velit error ut inventore. Voluptatem, quasi? Amet debitis unde id provident corporis quaerat natus blanditiis, delectus commodi vero quis?</p>
+                      </div>
+                      <div class="about-personnel">
+                          <h3>Meet Our Team</h3>
+                          <div class="about-personnel-container">
+                              <div class="about-personnel-card">
+                                  <img src="/public/images/artist1.jpg" alt="" class="about-personnel-image">
+                                  <h4>Example Name</h4>
+                                  <p>Nail Artist</p>
+                                  <div class="hover-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                              </div>
+                              <div class="about-personnel-card">
+                                <img src="/public/images/artist1.jpg" alt="" class="about-personnel-image">
+                                <h4>Example Name</h4>
+                                <p>Nail Artist</p>
+                                <div class="hover-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                              </div>
+                              <div class="about-personnel-card">
+                                <img src="/public/images/artist1.jpg" alt="" class="about-personnel-image">
+                                <h4>Example Name</h4>
+                                <p>Nail Artist</p>
+                                <div class="hover-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          </div>
+  
+          <div class="page-space">
+            <section id="booking" class="booking-section">
+                <h2>Book an Appointment</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sunt quia molestiae sint.</p>
+                <form class="booking-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+        
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" required>
+        
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" required>
+        
+                    <label for="service">Select Service:</label>
+                    <select id="service" required>
+                        <option value="">--Choose a Service--</option>
+                        <option value="manicure">Manicure</option>
+                        <option value="pedicure">Pedicure</option>
+                        <option value="nailart">Nail Art</option>
+                        <option value="gelnails">Gel Nails</option>
+                    </select>      
+                    <button type="submit">Book Now</button>
+                </form>
+            </section>
+          </div>
+          <div class="page-space">
+            <section id="contact" class="contact-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out to us using the form below.</p>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="4" required></textarea>
+        
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+        </div>
+            <footer class="footer">
+              <div class="footer-content">
+                  <p> 2024 WebsiteDemo.</p>
+                  <ul class="footer-links">
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#booking">Booking</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+          </footer>
+          </section>
+        </div> 
+      </main>
+    
 </body>
 </html>
